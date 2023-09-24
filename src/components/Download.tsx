@@ -60,16 +60,20 @@ const Download = () => {
       />
       <button
         id="download-btn"
-        class="hover:bg-green-500 align-middle rounded-md w-1/4 h-14 mx-auto mt-3 mb-4 text-black font-semibold text-xl max-sm:text-sm bg-green-300 grid-cols-6 border-2 border-black"
+        class={`${
+          !isLoading && "hover:bg-green-500"
+        } align-middle rounded-md w-1/4 h-14 mx-auto mt-3 mb-4 text-black font-semibold text-xl max-sm:text-sm bg-green-300 grid-cols-6 border-2 border-black`}
         onClick={downloadFromUrl}
         disabled={isLoading}
       >
-        <span class={`inline-block align-middle ${isLoading ? "mb-12" : "mb-2"} text-center`}>Convert</span>
+        <span class={`inline-block align-middle mb-2 text-center`}>
+          Convert
+        </span>
         {isLoading && <div class="loader ml-4"></div>}
       </button>
       {isInvalidUrlId && (
-        <div class="rounded-md bg-red-400 w-1/5 md:h-12 mx-auto sm:h-24 my-4">
-          <div class="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] md:text-lg xs:text-sm mt-2">
+        <div class="rounded-md bg-red-400 w-1/5 max-sm:w-1/2 max-md:h-12 mx-auto max-sm:h-24 my-4">
+          <div class="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] max-md:text-lg max-xs:text-sm my-2 px-1">
             The url you submitted is invalid
           </div>
         </div>
