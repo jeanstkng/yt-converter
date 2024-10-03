@@ -21,7 +21,7 @@
     "preact": "^10.6.5",
     "stream-to-blob": "^2.0.1",
     "tailwindcss": "^3.0.24",
-    "ytdl-core": "^4.11.5"
+    "@distube/ytdl-core": "^4.14.4"
   },
   "devDependencies": {
     "@types/node": "^20.6.3"

@@ -1,7 +1,7 @@
 export const prerender = false;
 import type { APIRoute } from "astro";
 import streamToBlob from "stream-to-blob";
-import ytdl, { type Filter } from "ytdl-core";
+import ytdl, { type Filter } from "@distube/ytdl-core";
 
 interface ContentType {
   contentType: string;
