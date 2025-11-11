@@ -3,6 +3,10 @@ dist/
 
 # generated types
 .astro/
+.vercel/
+.kilocode/
+
+package-lock.json
 
 # dependencies
 node_modules/
